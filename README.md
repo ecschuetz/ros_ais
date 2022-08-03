@@ -5,11 +5,12 @@
 
 Software License Agreement (BSD License)
 
-**Description**: ROS driver for the dAISy AIS (Automatic Identification System)
+**Description**: ROS driver for the (Automatic Identification System)
 * CLASS A AIS POSITION REPORT (MESSAGES 1, 2, AND 3)
 * AIS BASE STATION REPORT (MESSAGE 4) AND COORDINATED UNIVERSAL TIME AND DATE RESPONSE (MESSAGE 11)
+* MESSAGE 8 DAC 200 . geometry report
 
-## 1. Supported ROS Distribution
+## 1. tested ROS distribution
 
 * ROS Noetic Ninjemys (Ubuntu 20.04)
 
@@ -31,7 +32,8 @@ $ pip install pyserial
 ```
 install libais for `import ais`
 ```
-cd utils/libais
+git clone https://github.com/schwehr/libais.git
+cd libais
 python3 setup.py build
 python3 setup.py install
 ```
@@ -39,7 +41,7 @@ create ros package
 ```
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-git clone https://git.tu-berlin.de/ecschuetz/ros_ais.git
+git clone https://github.com/ecschuetz/ros_ais.git
 cd ..
 catkin_make
 source devel/setup.bash
