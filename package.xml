@@ -2,10 +2,10 @@
 <package format="2">
   <name>ros_ais</name>
   <version>0.0.0</version>
-  <description>The ros_ais package</description>
+  <description>The ros2_ais package</description>
 
 
-  <maintainer email="enrico.schuetz@campus.tu-berlin.de">oem</maintainer>
+  <maintainer email="enrico.schuetz@campus.tu-berlin.de">Enrico Schuetz</maintainer>
 
 
 
@@ -16,7 +16,6 @@
 
 
   <author email="enrico.schuetz@campus.tu-berlin.de">Enrico Schuetz</author>
-  <author email="jochen.gallep@tu-berlin.de">Jochen Gallep</author>
 
 
 
@@ -31,6 +30,9 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
 
+  <!-- ROS2 relevant code -->
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
