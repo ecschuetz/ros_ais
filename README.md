@@ -12,7 +12,7 @@ Software License Agreement (BSD License)
 
 ## 1. tested ROS distribution
 
-* ROS Noetic Ninjemys (Ubuntu 20.04)
+* ROS2 Hubmle (Ubuntu 22.04)
 
 ## 2. Dependencies
 * Python 3
@@ -39,12 +39,13 @@ python3 setup.py install
 ```
 create ros package
 ```
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-git clone https://github.com/ecschuetz/ros_ais.git
+mkdir -p ~/<$ROS_WORKSPACE>/src
+cd ~/<$ROS_WORKSPACE>/src
+git clone -b ros2 https://github.com/ecschuetz/ros_ais.git
+git clone https://github.com/ecschuetz/ais_common.git
 cd ..
-catkin_make
-source devel/setup.bash
+colcon build
+source install/setup.bash
 ```
 
 ## 4. launch ais
@@ -65,6 +66,5 @@ You can see all available Messages in the picture. For more information, see [ht
 
 in `msg/ros_AIS4_11.msg` you can find the class A AIS Base Station Report, see.
 <img src="utils/images/BaseStationReport.png" width="100%">
-
 
 
