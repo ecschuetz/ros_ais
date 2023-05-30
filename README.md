@@ -59,6 +59,5 @@ ros2 launch ros_ais ais.launch.py
 ## 5. mentioned reports 
 in `msg/rosais123.msg` you will find the class A AIS Position Report Messages, as defined in libais.
 For more information, see [https://gpsd.gitlab.io/gpsd/AIVDM.html](https://gpsd.gitlab.io/gpsd/AIVDM.html) and [https://github.com/schwehr/libais/blob/master/src/libais/ais1_2_3.cpp](https://github.com/schwehr/libais/blob/master/src/libais/ais1_2_3.cpp)
-<img src="utils/images/PositionReport.png" width="100%">
 
 in `msg/rosais411.msg` you find the class A AIS Base Station Report.
