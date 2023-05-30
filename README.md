@@ -50,21 +50,15 @@ source install/setup.bash
 
 ## 4. launch ais
 
-edit launch file `launch/ais.launch` for correct serial port and baudrate
+edit launch file `launch/ais.launch.py` for correct serial port and baudrate
 ```
-roslaunch ros_ais ros_daisy.py
+ros2 launch ros_ais ais.launch.py
 ```
-alternatively change it from commandline
-```
-roslaunch ros_ais ros_daisy.py serial_port:=/dev/ttyACM0 baudrate:=38400  # default
-```
+
 
 ## 5. mentioned reports 
-in `msg/ros_AIS123.msg` your can find the class A AIS Position Report Messages, as defined in libais.
-You can see all available Messages in the picture. For more information, see [https://gpsd.gitlab.io/gpsd/AIVDM.html](https://gpsd.gitlab.io/gpsd/AIVDM.html) and [https://github.com/schwehr/libais/blob/master/src/libais/ais1_2_3.cpp](https://github.com/schwehr/libais/blob/master/src/libais/ais1_2_3.cpp)
+in `msg/rosais123.msg` you will find the class A AIS Position Report Messages, as defined in libais.
+For more information, see [https://gpsd.gitlab.io/gpsd/AIVDM.html](https://gpsd.gitlab.io/gpsd/AIVDM.html) and [https://github.com/schwehr/libais/blob/master/src/libais/ais1_2_3.cpp](https://github.com/schwehr/libais/blob/master/src/libais/ais1_2_3.cpp)
 <img src="utils/images/PositionReport.png" width="100%">
 
-in `msg/ros_AIS4_11.msg` you can find the class A AIS Base Station Report, see.
-<img src="utils/images/BaseStationReport.png" width="100%">
-
-
+in `msg/rosais411.msg` you find the class A AIS Base Station Report.
